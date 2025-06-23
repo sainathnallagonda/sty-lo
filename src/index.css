@@ -89,7 +89,7 @@
   }
 }
 
-/* Custom animations for Stylo */
+/* Enhanced animations for Stylo */
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
@@ -122,6 +122,34 @@
     }
   }
 
+  /* Heart beat animation */
+  .animate-heartbeat {
+    animation: heartbeat 2s infinite ease-in-out;
+  }
+
+  @keyframes heartbeat {
+    0%, 50%, 100% {
+      transform: scale(1);
+    }
+    25%, 75% {
+      transform: scale(1.1);
+    }
+  }
+
+  /* Gentle glow effect */
+  .animate-glow {
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+    }
+  }
+
   /* Smooth scroll behavior */
   html {
     scroll-behavior: smooth;
@@ -130,5 +158,19 @@
   /* Custom gradient backgrounds */
   .bg-stylo-gradient {
     background: linear-gradient(135deg, #dbeafe 0%, #dcfce7 100%);
+  }
+
+  /* Pulse animation for connection lines */
+  .animate-line-pulse {
+    animation: linePulse 3s infinite;
+  }
+
+  @keyframes linePulse {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.8;
+    }
   }
 }

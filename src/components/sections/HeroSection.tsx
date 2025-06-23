@@ -8,15 +8,16 @@ export const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-100 via-blue-50 to-green-100">
-      {/* Soft globe background */}
+      {/* Enhanced globe background with animated connection lines */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border-2 border-blue-300 animate-pulse"></div>
         <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full border border-green-300 animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-1/4 left-1/3 w-48 h-48 rounded-full border border-orange-300 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        {/* Connection lines */}
+        {/* Animated connection lines */}
         <svg className="absolute inset-0 w-full h-full" style={{ filter: 'blur(1px)' }}>
           <line x1="25%" y1="25%" x2="75%" y2="33%" stroke="#93C5FD" strokeWidth="1" strokeDasharray="5,5" className="animate-pulse" />
           <line x1="33%" y1="75%" x2="75%" y2="33%" stroke="#86EFAC" strokeWidth="1" strokeDasharray="5,5" className="animate-pulse" />
+          <line x1="25%" y1="25%" x2="33%" y2="75%" stroke="#FED7AA" strokeWidth="1" strokeDasharray="3,3" className="animate-pulse" style={{ animationDelay: '1.5s' }} />
         </svg>
       </div>
 

@@ -21,11 +21,12 @@ export const ServiceCategoriesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer transform hover:scale-105 hover:shadow-xl transition-all duration-300 animate-on-scroll opacity-0"
+              className="bg-white p-6 rounded-2xl shadow-lg text-center cursor-pointer transform hover:scale-105 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-on-scroll opacity-0 group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
+              <div className="text-4xl mb-4 group-hover:animate-bounce-gentle">{service.icon}</div>
               <h3 className="text-lg font-semibold text-gray-800">{service.name}</h3>
+              <div className={`absolute inset-0 rounded-2xl bg-${service.color}-100 opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
             </div>
           ))}
         </div>

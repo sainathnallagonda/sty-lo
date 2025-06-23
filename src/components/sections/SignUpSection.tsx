@@ -41,6 +41,15 @@ export const SignUpSection = () => {
     return null; // Hide form after submission
   }
 
+  const getRecipientEmoji = (type: string) => {
+    switch (type) {
+      case 'family': return '❤️';
+      case 'friend': return '🤝';
+      case 'other': return '💝';
+      default: return '';
+    }
+  };
+
   return (
     <section id="signup-section" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -96,16 +105,23 @@ export const SignUpSection = () => {
 
               <div>
                 <Label className="text-lg font-medium text-gray-700">Recipient Type</Label>
-                <Select onValueChange={(value) => setFormData(prev => ({ ...prev, recipientType: value }))}>
-                  <SelectTrigger className="mt-2 rounded-xl border-2 border-gray-200 text-lg p-4 h-auto">
-                    <SelectValue placeholder="Select recipient type" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="family">Family</SelectItem>
-                    <SelectItem value="friend">Friend</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
+                <div className="flex items-center gap-2 mt-2">
+                  <Select onValueChange={(value) => setFormData(prev => ({ ...prev, recipientType: value }))}>
+                    <SelectTrigger className="rounded-xl border-2 border-gray-200 text-lg p-4 h-auto flex-1">
+                      <SelectValue placeholder="Select recipient type" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="family">Family</SelectItem>
+                      <SelectItem value="friend">Friend</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  {formData.recipientType && (
+                    <span className="text-2xl animate-bounce-gentle">
+                      {getRecipientEmoji(formData.recipientType)}
+                    </span>
+                  )}
+                </div>
               </div>
 
               <div>
