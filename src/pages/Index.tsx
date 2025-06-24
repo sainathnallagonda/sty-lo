@@ -2,9 +2,12 @@
 import { useEffect } from "react";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { WhatIsSection } from "@/components/sections/WhatIsSection";
+import { TrustSection } from "@/components/sections/TrustSection";
 import { SocialProofSection } from "@/components/sections/SocialProofSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { ServiceCategoriesSection } from "@/components/sections/ServiceCategoriesSection";
+import { InteractiveDemoSection } from "@/components/sections/InteractiveDemoSection";
+import { FAQSection } from "@/components/sections/FAQSection";
 import { SignUpSection } from "@/components/sections/SignUpSection";
 import { ThankYouSection } from "@/components/sections/ThankYouSection";
 import { StickyBottomBar } from "@/components/sections/StickyBottomBar";
@@ -40,9 +43,12 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-green-50">
       <HeroSection />
       <WhatIsSection />
+      <TrustSection />
       <SocialProofSection />
       <HowItWorksSection />
       <ServiceCategoriesSection />
+      <InteractiveDemoSection />
+      <FAQSection />
       <SignUpSection />
       <ThankYouSection />
       <FooterSection />
