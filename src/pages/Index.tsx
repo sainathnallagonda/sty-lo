@@ -6,6 +6,11 @@ import { TrustSection } from "@/components/sections/TrustSection";
 import { SocialProofSection } from "@/components/sections/SocialProofSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { ServiceCategoriesSection } from "@/components/sections/ServiceCategoriesSection";
+import { ServiceProvidersSection } from "@/components/sections/ServiceProvidersSection";
+import { LiveStatusSection } from "@/components/sections/LiveStatusSection";
+import { MultiLanguageSection } from "@/components/sections/MultiLanguageSection";
+import { EmergencyServicesSection } from "@/components/sections/EmergencyServicesSection";
+import { SuccessStoriesSection } from "@/components/sections/SuccessStoriesSection";
 import { InteractiveDemoSection } from "@/components/sections/InteractiveDemoSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { SignUpSection } from "@/components/sections/SignUpSection";
@@ -47,6 +52,11 @@ const Index = () => {
       <SocialProofSection />
       <HowItWorksSection />
       <ServiceCategoriesSection />
+      <ServiceProvidersSection />
+      <LiveStatusSection />
+      <MultiLanguageSection />
+      <EmergencyServicesSection />
+      <SuccessStoriesSection />
       <InteractiveDemoSection />
       <FAQSection />
       <SignUpSection />
