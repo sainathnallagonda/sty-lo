@@ -5,13 +5,14 @@ import { WhatIsSection } from "@/components/sections/WhatIsSection";
 import { TrustSection } from "@/components/sections/TrustSection";
 import { SocialProofSection } from "@/components/sections/SocialProofSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
+import { LaunchTimelineSection } from "@/components/sections/LaunchTimelineSection";
+import { DevelopmentProgressSection } from "@/components/sections/DevelopmentProgressSection";
 import { ServiceCategoriesSection } from "@/components/sections/ServiceCategoriesSection";
 import { ServiceProvidersSection } from "@/components/sections/ServiceProvidersSection";
-import { LiveStatusSection } from "@/components/sections/LiveStatusSection";
 import { MultiLanguageSection } from "@/components/sections/MultiLanguageSection";
 import { EmergencyServicesSection } from "@/components/sections/EmergencyServicesSection";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { SignUpSection } from "@/components/sections/SignUpSection";
+import { EarlyAccessSection } from "@/components/sections/EarlyAccessSection";
 import { ThankYouSection } from "@/components/sections/ThankYouSection";
 import { StickyBottomBar } from "@/components/sections/StickyBottomBar";
 import { FooterSection } from "@/components/sections/FooterSection";
@@ -49,13 +50,14 @@ const Index = () => {
       <TrustSection />
       <SocialProofSection />
       <HowItWorksSection />
+      <LaunchTimelineSection />
+      <DevelopmentProgressSection />
       <ServiceCategoriesSection />
       <ServiceProvidersSection />
-      <LiveStatusSection />
       <MultiLanguageSection />
       <EmergencyServicesSection />
       <FAQSection />
-      <SignUpSection />
+      <EarlyAccessSection />
       <ThankYouSection />
       <FooterSection />
       <StickyBottomBar />

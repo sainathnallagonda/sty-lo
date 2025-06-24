@@ -196,6 +196,39 @@ export type Database = {
           },
         ]
       }
+      early_access_signups: {
+        Row: {
+          country: string
+          created_at: string
+          email: string
+          id: string
+          interested_services: string[] | null
+          name: string
+          referral_source: string | null
+          use_case: string | null
+        }
+        Insert: {
+          country: string
+          created_at?: string
+          email: string
+          id?: string
+          interested_services?: string[] | null
+          name: string
+          referral_source?: string | null
+          use_case?: string | null
+        }
+        Update: {
+          country?: string
+          created_at?: string
+          email?: string
+          id?: string
+          interested_services?: string[] | null
+          name?: string
+          referral_source?: string | null
+          use_case?: string | null
+        }
+        Relationships: []
+      }
       order_chat_messages: {
         Row: {
           created_at: string
@@ -324,6 +357,57 @@ export type Database = {
           total_amount?: number
           updated_at?: string
           vendor_id?: string
+        }
+        Relationships: []
+      }
+      partner_applications: {
+        Row: {
+          business_name: string
+          business_type: string | null
+          contact_name: string
+          country: string
+          created_at: string
+          description: string | null
+          email: string
+          experience_years: number | null
+          id: string
+          phone: string | null
+          services_offered: string[] | null
+          status: string | null
+          updated_at: string
+          website: string | null
+        }
+        Insert: {
+          business_name: string
+          business_type?: string | null
+          contact_name: string
+          country: string
+          created_at?: string
+          description?: string | null
+          email: string
+          experience_years?: number | null
+          id?: string
+          phone?: string | null
+          services_offered?: string[] | null
+          status?: string | null
+          updated_at?: string
+          website?: string | null
+        }
+        Update: {
+          business_name?: string
+          business_type?: string | null
+          contact_name?: string
+          country?: string
+          created_at?: string
+          description?: string | null
+          email?: string
+          experience_years?: number | null
+          id?: string
+          phone?: string | null
+          services_offered?: string[] | null
+          status?: string | null
+          updated_at?: string
+          website?: string | null
         }
         Relationships: []
       }
@@ -600,6 +684,33 @@ export type Database = {
           updated_at?: string
           user_id?: string
           verification_status?: string | null
+        }
+        Relationships: []
+      }
+      waitlist_signups: {
+        Row: {
+          country: string
+          created_at: string
+          email: string
+          id: string
+          name: string
+          notification_preferences: Json | null
+        }
+        Insert: {
+          country: string
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          notification_preferences?: Json | null
+        }
+        Update: {
+          country?: string
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          notification_preferences?: Json | null
         }
         Relationships: []
       }
