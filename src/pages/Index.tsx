@@ -10,8 +10,6 @@ import { ServiceProvidersSection } from "@/components/sections/ServiceProvidersS
 import { LiveStatusSection } from "@/components/sections/LiveStatusSection";
 import { MultiLanguageSection } from "@/components/sections/MultiLanguageSection";
 import { EmergencyServicesSection } from "@/components/sections/EmergencyServicesSection";
-import { SuccessStoriesSection } from "@/components/sections/SuccessStoriesSection";
-import { InteractiveDemoSection } from "@/components/sections/InteractiveDemoSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { SignUpSection } from "@/components/sections/SignUpSection";
 import { ThankYouSection } from "@/components/sections/ThankYouSection";
@@ -56,8 +54,6 @@ const Index = () => {
       <LiveStatusSection />
       <MultiLanguageSection />
       <EmergencyServicesSection />
-      <SuccessStoriesSection />
-      <InteractiveDemoSection />
       <FAQSection />
       <SignUpSection />
       <ThankYouSection />

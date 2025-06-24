@@ -27,14 +27,14 @@ export const WhatIsSection = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6">How It Works in Real Life</h3>
             <div className="grid md:grid-cols-3 gap-6 items-center">
               <div className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🇮🇳</span>
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🇺🇸</span>
                 </div>
-                <h4 className="font-semibold text-gray-800 mb-2">You in India</h4>
-                <p className="text-gray-600">Want to send groceries to your parents in the USA</p>
+                <h4 className="font-semibold text-gray-800 mb-2">You in USA</h4>
+                <p className="text-gray-600">Want to send groceries to your parents in India</p>
                 <div className="flex items-center justify-center mt-3">
-                  <IndianRupee className="w-5 h-5 text-green-600 mr-1" />
-                  <span className="font-semibold text-green-600">₹2,000</span>
+                  <DollarSign className="w-5 h-5 text-blue-600 mr-1" />
+                  <span className="font-semibold text-blue-600">$25</span>
                 </div>
               </div>
               
@@ -43,14 +43,14 @@ export const WhatIsSection = () => {
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🇺🇸</span>
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🇮🇳</span>
                 </div>
-                <h4 className="font-semibold text-gray-800 mb-2">Parents in USA</h4>
+                <h4 className="font-semibold text-gray-800 mb-2">Parents in India</h4>
                 <p className="text-gray-600">Receive fresh groceries delivered locally</p>
                 <div className="flex items-center justify-center mt-3">
-                  <DollarSign className="w-5 h-5 text-blue-600 mr-1" />
-                  <span className="font-semibold text-blue-600">$25</span>
+                  <IndianRupee className="w-5 h-5 text-green-600 mr-1" />
+                  <span className="font-semibold text-green-600">₹2,000</span>
                 </div>
               </div>
             </div>
