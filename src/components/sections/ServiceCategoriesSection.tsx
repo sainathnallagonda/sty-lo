@@ -73,28 +73,6 @@ export const ServiceCategoriesSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Popular services by country */}
-        <div className="mt-16 text-center animate-on-scroll opacity-0">
-          <h3 className="text-2xl font-bold text-white mb-8">Popular in Different Countries</h3>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:border-pink-400/50 transition-all duration-300">
-              <span className="text-2xl mb-2 block">🇺🇸</span>
-              <h4 className="font-semibold mb-2 text-white">United States</h4>
-              <p className="text-sm text-purple-200">Grocery delivery, Home cleaning, Medical supplies</p>
-            </div>
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:border-pink-400/50 transition-all duration-300">
-              <span className="text-2xl mb-2 block">🇮🇳</span>
-              <h4 className="font-semibold mb-2 text-white">India</h4>
-              <p className="text-sm text-purple-200">Food delivery, Elder care, Medicine delivery</p>
-            </div>
-            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:border-pink-400/50 transition-all duration-300">
-              <span className="text-2xl mb-2 block">🇬🇧</span>
-              <h4 className="font-semibold mb-2 text-white">United Kingdom</h4>
-              <p className="text-sm text-purple-200">Gift delivery, Transportation, Home services</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
