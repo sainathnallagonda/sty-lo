@@ -106,141 +106,159 @@ export const PartnerApplicationModal = ({ isOpen, onClose }: PartnerApplicationM
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl bg-gradient-to-br from-purple-900 to-purple-800 border border-pink-400/30 text-white">
         <DialogHeader>
-          <DialogTitle>Become a Stylo Partner</DialogTitle>
-          <DialogDescription>
-            Join our network of trusted service providers and help families care for their loved ones across borders.
+          <DialogTitle className="text-2xl font-bold text-white">
+            Partner Application
+          </DialogTitle>
+          <DialogDescription className="text-purple-200">
+            Join our network of trusted service providers
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit} className="space-y-4 max-h-96 overflow-y-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="businessName">Business Name *</Label>
-              <Input
-                id="businessName"
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Business Name *
+              </label>
+              <input
+                type="text"
                 value={formData.businessName}
-                onChange={(e) => setFormData(prev => ({ ...prev, businessName: e.target.value }))}
+                onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
+                className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
             </div>
             <div>
-              <Label htmlFor="contactName">Contact Name *</Label>
-              <Input
-                id="contactName"
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Contact Name *
+              </label>
+              <input
+                type="text"
                 value={formData.contactName}
-                onChange={(e) => setFormData(prev => ({ ...prev, contactName: e.target.value }))}
+                onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
+                className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="email">Email *</Label>
-              <Input
-                id="email"
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Email *
+              </label>
+              <input
                 type="email"
                 value={formData.email}
-                onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
                 required
               />
             </div>
             <div>
-              <Label htmlFor="phone">Phone</Label>
-              <Input
-                id="phone"
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Phone
+              </label>
+              <input
+                type="tel"
                 value={formData.phone}
-                onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
               />
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label>Country *</Label>
-              <Select onValueChange={(value) => setFormData(prev => ({ ...prev, country: value }))}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select country" />
-                </SelectTrigger>
-                <SelectContent>
-                  {countries.map(country => (
-                    <SelectItem key={country} value={country}>{country}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Country *
+              </label>
+              <input
+                type="text"
+                value={formData.country}
+                onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                required
+              />
             </div>
             <div>
-              <Label htmlFor="businessType">Business Type</Label>
-              <Input
-                id="businessType"
+              <label className="block text-sm font-medium text-purple-200 mb-2">
+                Business Type
+              </label>
+              <select
                 value={formData.businessType}
-                onChange={(e) => setFormData(prev => ({ ...prev, businessType: e.target.value }))}
-                placeholder="e.g., Restaurant, Florist, Grocery Store"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="website">Website</Label>
-              <Input
-                id="website"
-                type="url"
-                value={formData.website}
-                onChange={(e) => setFormData(prev => ({ ...prev, website: e.target.value }))}
-                placeholder="https://yourwebsite.com"
-              />
-            </div>
-            <div>
-              <Label htmlFor="experienceYears">Years of Experience</Label>
-              <Input
-                id="experienceYears"
-                type="number"
-                min="0"
-                value={formData.experienceYears}
-                onChange={(e) => setFormData(prev => ({ ...prev, experienceYears: e.target.value }))}
-              />
+                onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
+                className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+              >
+                <option value="" className="bg-purple-800">Select Type</option>
+                <option value="restaurant" className="bg-purple-800">Restaurant</option>
+                <option value="grocery" className="bg-purple-800">Grocery Store</option>
+                <option value="service" className="bg-purple-800">Service Provider</option>
+                <option value="retail" className="bg-purple-800">Retail</option>
+                <option value="other" className="bg-purple-800">Other</option>
+              </select>
             </div>
           </div>
 
           <div>
-            <Label>Services Offered</Label>
-            <div className="grid grid-cols-2 gap-3 mt-2">
-              {serviceOptions.map(service => (
-                <div key={service} className="flex items-center space-x-2">
-                  <Checkbox
-                    id={service}
-                    checked={formData.servicesOffered.includes(service)}
-                    onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)}
-                  />
-                  <Label htmlFor={service} className="text-sm cursor-pointer">
-                    {service}
-                  </Label>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <Label htmlFor="description">Business Description</Label>
-            <Textarea
-              id="description"
-              value={formData.description}
-              onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-              placeholder="Tell us about your business, services, and why you'd like to partner with Stylo..."
-              rows={4}
+            <label className="block text-sm font-medium text-purple-200 mb-2">
+              Website
+            </label>
+            <input
+              type="url"
+              value={formData.website}
+              onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+              className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              placeholder="https://"
             />
           </div>
 
-          <Button 
-            type="submit" 
-            className="w-full bg-green-600 hover:bg-green-700"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Submitting..." : "Submit Partnership Application"}
-          </Button>
+          <div>
+            <label className="block text-sm font-medium text-purple-200 mb-2">
+              Business Description
+            </label>
+            <textarea
+              value={formData.description}
+              onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+              rows={3}
+              className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              placeholder="Tell us about your business..."
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-purple-200 mb-2">
+              Years of Experience
+            </label>
+            <input
+              type="number"
+              value={formData.experienceYears}
+              onChange={(e) => setFormData({ ...formData, experienceYears: parseInt(e.target.value) || 0 })}
+              className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              min="0"
+              max="100"
+            />
+          </div>
+
+          <div className="flex justify-end gap-3 pt-4">
+            <Button 
+              type="button" 
+              variant="outline" 
+              onClick={onClose}
+              className="border-purple-400/30 text-purple-200 hover:bg-white/10"
+            >
+              Cancel
+            </Button>
+            <Button 
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white"
+            >
+              {isSubmitting ? "Submitting..." : "Submit Application"}
+            </Button>
+          </div>
         </form>
       </DialogContent>
     </Dialog>

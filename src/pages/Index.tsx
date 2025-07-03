@@ -1,21 +1,12 @@
 
 import { useEffect } from "react";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { WhatIsSection } from "@/components/sections/WhatIsSection";
-import { TrustSection } from "@/components/sections/TrustSection";
-import { SocialProofSection } from "@/components/sections/SocialProofSection";
+import { VideoSection } from "@/components/sections/VideoSection";
+import { WaitlistSection } from "@/components/sections/WaitlistSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
-import { LaunchTimelineSection } from "@/components/sections/LaunchTimelineSection";
-import { DevelopmentProgressSection } from "@/components/sections/DevelopmentProgressSection";
 import { ServiceCategoriesSection } from "@/components/sections/ServiceCategoriesSection";
 import { ServiceProvidersSection } from "@/components/sections/ServiceProvidersSection";
-import { MultiLanguageSection } from "@/components/sections/MultiLanguageSection";
-import { EmergencyServicesSection } from "@/components/sections/EmergencyServicesSection";
-import { FAQSection } from "@/components/sections/FAQSection";
-import { EarlyAccessSection } from "@/components/sections/EarlyAccessSection";
-import { ThankYouSection } from "@/components/sections/ThankYouSection";
 import { StickyBottomBar } from "@/components/sections/StickyBottomBar";
-import { FooterSection } from "@/components/sections/FooterSection";
 
 const Index = () => {
   useEffect(() => {
@@ -44,22 +35,13 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-b from-purple-900 via-purple-800 to-purple-900">
       <HeroSection />
-      <WhatIsSection />
-      <TrustSection />
-      <SocialProofSection />
+      <VideoSection />
+      <WaitlistSection />
       <HowItWorksSection />
-      <LaunchTimelineSection />
-      <DevelopmentProgressSection />
       <ServiceCategoriesSection />
       <ServiceProvidersSection />
-      <MultiLanguageSection />
-      <EmergencyServicesSection />
-      <FAQSection />
-      <EarlyAccessSection />
-      <ThankYouSection />
-      <FooterSection />
       <StickyBottomBar />
     </div>
   );
