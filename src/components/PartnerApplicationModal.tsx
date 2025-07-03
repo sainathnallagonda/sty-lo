@@ -1,11 +1,6 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -35,11 +30,6 @@ export const PartnerApplicationModal = ({ isOpen, onClose }: PartnerApplicationM
     "Food Delivery", "Grocery Delivery", "Flower Delivery", "Gift Delivery",
     "Home Services", "Healthcare Services", "Transportation", "Emergency Services",
     "Personal Care", "Pet Services", "Other"
-  ];
-
-  const countries = [
-    "United States", "India", "United Kingdom", "Canada", "Australia", 
-    "Germany", "France", "Japan", "Brazil", "Mexico", "Other"
   ];
 
   const handleServiceChange = (service: string, checked: boolean) => {
@@ -106,7 +96,7 @@ export const PartnerApplicationModal = ({ isOpen, onClose }: PartnerApplicationM
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl bg-gradient-to-br from-purple-900 to-purple-800 border border-pink-400/30 text-white">
+      <DialogContent className="max-w-2xl bg-gradient-to-br from-purple-900/95 to-purple-800/95 backdrop-blur-xl border border-pink-400/30 text-white shadow-2xl">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-white">
             Partner Application
@@ -235,7 +225,7 @@ export const PartnerApplicationModal = ({ isOpen, onClose }: PartnerApplicationM
             <input
               type="number"
               value={formData.experienceYears}
-              onChange={(e) => setFormData({ ...formData, experienceYears: parseInt(e.target.value) || 0 })}
+              onChange={(e) => setFormData({ ...formData, experienceYears: e.target.value })}
               className="w-full px-3 py-2 bg-white/10 border border-purple-400/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
               min="0"
               max="100"
