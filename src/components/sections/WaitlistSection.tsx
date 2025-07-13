@@ -72,23 +72,23 @@ export const WaitlistSection = () => {
   };
 
   return (
-    <section id="signup-section" className="py-20 bg-gradient-to-b from-muted/50 to-muted">
+    <section id="signup-section" className="py-20 bg-gradient-to-b from-blue-50 to-cyan-50">
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 energy-pulse">
             Join the Waitlist
           </h2>
-          <p className="text-muted-foreground text-lg mb-8">
+          <p className="text-foreground text-lg mb-8">
             Be among the first to experience Stylo when we launch in December 2025
           </p>
 
           {/* Early Bird Offer Section */}
-          <div className="mb-8 p-6 bg-accent/10 border-2 border-accent/20 rounded-xl">
+          <div className="mb-8 p-6 bg-gradient-to-r from-lime-100 to-green-100 border-2 border-lime-300 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 energy-pulse">
             <div className="flex items-center justify-center mb-3">
               <span className="text-2xl mr-2">🎁</span>
-              <h3 className="text-xl font-bold text-primary">Early Bird Special: Get 1000 FREE Credits</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Early Bird Special: Get 1000 FREE Credits</h3>
             </div>
-            <p className="text-muted-foreground">
+            <p className="text-green-700 font-medium">
               Join now and receive 1000 credits when we launch - perfect for your first orders!
             </p>
           </div>
@@ -148,7 +148,7 @@ export const WaitlistSection = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-8 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full bg-action-gradient hover:from-red-600 hover:to-orange-600 text-white py-3 px-8 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 energy-pulse"
             >
               {isSubmitting ? "Joining..." : "Join Waitlist"}
             </Button>

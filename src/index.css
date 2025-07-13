@@ -7,39 +7,48 @@
 
 @layer base {
   :root {
-    /* Clean white background for energy and clarity */
-    --background: 0 0% 100%;
-    /* Deep navy for strong readability */
-    --foreground: 222 23% 16%;
+    /* Electric gradient background - bright cyan to electric blue */
+    --background: 190 100% 85%;
+    /* Deep navy for maximum readability and trust */
+    --foreground: 230 35% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 23% 16%;
+    --card-foreground: 230 35% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 23% 16%;
+    --popover-foreground: 230 35% 12%;
 
-    /* Vibrant trustworthy blue #0066FF */
-    --primary: 220 100% 50%;
+    /* Deep trustworthy blue #0044CC */
+    --primary: 220 100% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 25% 95%;
-    --secondary-foreground: 222 23% 16%;
+    --secondary: 190 60% 92%;
+    --secondary-foreground: 230 35% 12%;
 
-    --muted: 210 25% 95%;
-    --muted-foreground: 222 15% 45%;
+    --muted: 190 40% 96%;
+    --muted-foreground: 230 20% 50%;
 
-    /* Energetic orange for dynamic actions #FF6500 */
-    --accent: 24 100% 50%;
+    /* Electric orange-red for energy #FF4400 */
+    --accent: 15 100% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 20% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 60 10% 87%;
-    --input: 60 10% 87%;
-    --ring: 203 48% 34%;
+    --border: 190 30% 85%;
+    --input: 190 30% 90%;
+    --ring: 220 100% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* New energetic design tokens */
+    --energy-gradient: linear-gradient(135deg, #00F5FF 0%, #1E90FF 50%, #0066CC 100%);
+    --action-gradient: linear-gradient(135deg, #FF4400 0%, #FF1744 100%);
+    --trust-gradient: linear-gradient(135deg, #0066CC 0%, #00ACC1 100%);
+    --success-gradient: linear-gradient(135deg, #00E676 0%, #76FF03 100%);
+    --highlight-yellow: 60 100% 50%;
+    --trust-teal: 187 100% 38%;
+    --energy-lime: 75 100% 50%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -52,25 +61,26 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Dark mode with energetic accents */
+    --background: 230 25% 8%;
+    --foreground: 190 60% 92%;
+    --card: 230 20% 12%;
+    --card-foreground: 190 60% 92%;
+    --popover: 230 20% 12%;
+    --popover-foreground: 190 60% 92%;
+    --primary: 190 100% 50%;
+    --primary-foreground: 230 25% 8%;
+    --secondary: 230 15% 18%;
+    --secondary-foreground: 190 60% 92%;
+    --muted: 230 15% 18%;
+    --muted-foreground: 190 30% 65%;
+    --accent: 15 100% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 230 15% 25%;
+    --input: 230 15% 25%;
+    --ring: 190 100% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -159,9 +169,65 @@
     scroll-behavior: smooth;
   }
 
-  /* Custom gradient backgrounds */
-  .bg-stylo-gradient {
-    background: linear-gradient(135deg, #dbeafe 0%, #dcfce7 100%);
+  /* Energetic gradient backgrounds */
+  .bg-energy-gradient {
+    background: linear-gradient(135deg, #00F5FF 0%, #1E90FF 50%, #0066CC 100%);
+  }
+
+  .bg-action-gradient {
+    background: linear-gradient(135deg, #FF4400 0%, #FF1744 100%);
+  }
+
+  .bg-trust-gradient {
+    background: linear-gradient(135deg, #0066CC 0%, #00ACC1 100%);
+  }
+
+  .bg-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* New energetic animations */
+  .energy-float {
+    animation: energyFloat 6s ease-in-out infinite;
+  }
+
+  .energy-pulse {
+    animation: energyPulse 3s ease-in-out infinite;
+  }
+
+  .energy-rotate {
+    animation: energyRotate 10s linear infinite;
+  }
+
+  @keyframes energyFloat {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+  }
+
+  @keyframes energyPulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes energyRotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   /* Pulse animation for connection lines */
