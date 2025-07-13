@@ -7,48 +7,58 @@
 
 @layer base {
   :root {
-    /* Electric gradient background - bright cyan to electric blue */
-    --background: 190 100% 85%;
+    /* Unified Background System */
+    --background: linear-gradient(135deg, hsl(195, 100%, 50%) 0%, hsl(210, 100%, 56%) 25%, hsl(214, 100%, 40%) 75%, hsl(220, 100%, 25%) 100%);
+    --background-solid: 195 100% 50%;
+    
     /* Deep navy for maximum readability and trust */
-    --foreground: 230 35% 12%;
+    --foreground: 223 84% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 230 35% 12%;
+    /* Glass morphism card backgrounds */
+    --card: 0 0% 100% / 0.1;
+    --card-foreground: 223 84% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 230 35% 12%;
+    --popover: 0 0% 100% / 0.95;
+    --popover-foreground: 223 84% 25%;
 
-    /* Deep trustworthy blue #0044CC */
-    --primary: 220 100% 40%;
+    /* Energy gradient CTAs */
+    --primary: 9 100% 51%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 190 60% 92%;
-    --secondary-foreground: 230 35% 12%;
+    --secondary: 195 100% 50%;
+    --secondary-foreground: 223 84% 25%;
 
-    --muted: 190 40% 96%;
-    --muted-foreground: 230 20% 50%;
+    --muted: 0 0% 100% / 0.8;
+    --muted-foreground: 0 0% 26%;
 
-    /* Electric orange-red for energy #FF4400 */
-    --accent: 15 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    /* Energetic lime accent */
+    --accent: 120 100% 40%;
+    --accent-foreground: 223 84% 25%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 348 94% 20%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 190 30% 85%;
-    --input: 190 30% 90%;
-    --ring: 220 100% 40%;
+    /* Glass morphism borders */
+    --border: 0 0% 100% / 0.2;
+    --input: 0 0% 100% / 0.15;
+    --ring: 9 100% 51%;
 
     --radius: 0.75rem;
 
-    /* New energetic design tokens */
-    --energy-gradient: linear-gradient(135deg, #00F5FF 0%, #1E90FF 50%, #0066CC 100%);
-    --action-gradient: linear-gradient(135deg, #FF4400 0%, #FF1744 100%);
-    --trust-gradient: linear-gradient(135deg, #0066CC 0%, #00ACC1 100%);
-    --success-gradient: linear-gradient(135deg, #00E676 0%, #76FF03 100%);
-    --highlight-yellow: 60 100% 50%;
-    --trust-teal: 187 100% 38%;
-    --energy-lime: 75 100% 50%;
+    /* Unified Design System */
+    --unified-bg: linear-gradient(135deg, hsl(195, 100%, 50%) 0%, hsl(210, 100%, 56%) 25%, hsl(214, 100%, 40%) 75%, hsl(220, 100%, 25%) 100%);
+    --glass-bg: hsl(0, 0%, 100%, 0.1);
+    --glass-border: hsl(0, 0%, 100%, 0.2);
+    --glass-shadow: 0 8px 32px hsl(0, 0%, 0%, 0.1);
+    
+    /* Action gradients */
+    --energy-gradient: linear-gradient(135deg, hsl(9, 100%, 51%), hsl(348, 100%, 55%));
+    --trust-gradient: linear-gradient(135deg, hsl(214, 100%, 40%), hsl(195, 100%, 50%));
+    --success-gradient: linear-gradient(135deg, hsl(120, 100%, 40%), hsl(90, 100%, 50%));
+    
+    /* Dynamic elements */
+    --floating-shapes: hsl(195, 100%, 75%, 0.1);
+    --particle-color: hsl(0, 0%, 100%, 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -98,8 +108,54 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    background: var(--unified-bg);
+    color: hsl(var(--foreground));
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* Unified Background Container */
+  .unified-bg {
+    background: var(--unified-bg);
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Glass Morphism Effects */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  /* Floating Background Elements */
+  .floating-shapes::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    background: var(--floating-shapes);
+    border-radius: 50%;
+    animation: energy-float 6s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  .floating-shapes::after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 15%;
+    width: 150px;
+    height: 150px;
+    background: var(--floating-shapes);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: energy-float 8s ease-in-out infinite reverse;
+    z-index: 0;
   }
 }
 

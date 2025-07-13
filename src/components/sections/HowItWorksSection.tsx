@@ -30,13 +30,13 @@ export const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-purple-900/50 to-purple-800/30">
+    <section className="py-20 relative z-10">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 animate-on-scroll opacity-0">
             How it Works
           </h2>
-          <p className="text-purple-200 text-lg max-w-2xl mx-auto">
+          <p className="text-white/80 text-lg max-w-2xl mx-auto">
             Three simple steps to send care across borders
           </p>
         </div>
@@ -50,17 +50,17 @@ export const HowItWorksSection = () => {
                 className="text-center animate-on-scroll opacity-0 transition-all duration-800 group"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-pink-400/50 transition-all duration-300 group-hover:scale-105">
-                  <div className={`w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r from-${step.color}-500 to-purple-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all duration-300`}>
+                <div className="glass-card rounded-2xl p-8 hover:border-white/40 transition-all duration-300 group-hover:scale-105 energy-float">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all duration-300 energy-pulse">
                     <IconComponent className={`w-8 h-8 text-white ${step.animation}`} />
                   </div>
                   
-                  <div className={`inline-block w-8 h-8 rounded-full bg-gradient-to-r from-${step.color}-500 to-purple-600 text-white font-bold text-lg mb-4 flex items-center justify-center`}>
+                  <div className="inline-block w-8 h-8 rounded-full bg-gradient-to-r from-lime-400 to-green-500 text-white font-bold text-lg mb-4 flex items-center justify-center">
                     {step.number}
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                  <p className="text-purple-200 text-lg">{step.description}</p>
+                  <p className="text-white/70 text-lg">{step.description}</p>
                 </div>
               </div>
             );
