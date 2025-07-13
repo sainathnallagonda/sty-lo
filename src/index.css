@@ -6,34 +6,34 @@
 
 @layer base {
   :root {
-    /* New Color Scheme */
+    /* Exact Color Scheme as Specified */
     --background: 245 250 255; /* #F5FAFF - Soft white-blue */
     --foreground: 26 26 26; /* #1A1A1A - Deep gray/black */
     
     --card: 255 255 255; /* White cards */
-    --card-foreground: 26 26 26;
+    --card-foreground: 26 26 26; /* #1A1A1A */
     
     --popover: 255 255 255;
-    --popover-foreground: 26 26 26;
+    --popover-foreground: 26 26 26; /* #1A1A1A */
     
     --primary: 0 122 255; /* #007AFF - Apple-style blue */
     --primary-foreground: 255 255 255;
     
     --secondary: 0 208 132; /* #00D084 - Green-teal */
-    --secondary-foreground: 26 26 26;
+    --secondary-foreground: 26 26 26; /* #1A1A1A */
     
     --muted: 241 245 249;
-    --muted-foreground: 100 116 139;
+    --muted-foreground: 26 26 26; /* #1A1A1A for better readability */
     
-    --accent: 0 122 255;
+    --accent: 0 122 255; /* #007AFF */
     --accent-foreground: 255 255 255;
     
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
     
-    --border: 226 232 240;
-    --input: 241 245 249;
-    --ring: 0 122 255;
+    --border: 0 122 255; /* #007AFF for borders */
+    --input: 245 250 255; /* #F5FAFF - same as background */
+    --ring: 0 122 255; /* #007AFF */
     
     --radius: 0.75rem;
   }
@@ -51,18 +51,22 @@
 /* Custom gradient utilities */
 @layer utilities {
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    background: linear-gradient(135deg, #007AFF 0%, #00D084 100%);
   }
   
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, #e0f2fe 100%);
+    background: linear-gradient(135deg, #F5FAFF 0%, #E6F7FF 100%);
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    background: linear-gradient(135deg, #007AFF 0%, #00D084 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  
+  .cta-gradient {
+    background: linear-gradient(135deg, #007AFF 0%, #00D084 100%);
   }
 }
 

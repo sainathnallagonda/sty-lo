@@ -57,7 +57,7 @@ export const HeroSection = () => {
           
           <Button 
             onClick={scrollToSignup}
-            className="gradient-primary text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="cta-gradient text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Join Waitlist
           </Button>
