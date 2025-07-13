@@ -7,30 +7,30 @@
 
 @layer base {
   :root {
-    /* Soft cream background #FAF9F6 */
-    --background: 60 20% 98%;
-    /* Dark charcoal gray text #2C3E50 */
-    --foreground: 210 29% 24%;
+    /* Clean white background for energy and clarity */
+    --background: 0 0% 100%;
+    /* Deep navy for strong readability */
+    --foreground: 222 23% 16%;
 
-    --card: 60 20% 98%;
-    --card-foreground: 210 29% 24%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 23% 16%;
 
-    --popover: 60 20% 98%;
-    --popover-foreground: 210 29% 24%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 23% 16%;
 
-    /* Deep teal for headings #2D5F7F */
-    --primary: 203 48% 34%;
-    --primary-foreground: 60 20% 98%;
+    /* Vibrant trustworthy blue #0066FF */
+    --primary: 220 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 60 10% 92%;
-    --secondary-foreground: 210 29% 24%;
+    --secondary: 210 25% 95%;
+    --secondary-foreground: 222 23% 16%;
 
-    --muted: 60 10% 92%;
-    --muted-foreground: 210 29% 45%;
+    --muted: 210 25% 95%;
+    --muted-foreground: 222 15% 45%;
 
-    /* Soft coral for buttons #FF6B6B */
-    --accent: 0 79% 70%;
-    --accent-foreground: 60 20% 98%;
+    /* Energetic orange for dynamic actions #FF6500 */
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 20% 98%;
