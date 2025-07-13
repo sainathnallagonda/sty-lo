@@ -17,7 +17,7 @@ export const StickyBottomBar = () => {
               Launching December 2025
             </p>
             <p className="text-purple-200 text-sm">
-              Join early access for exclusive benefits
+              Get 1000 FREE credits with early access
             </p>
           </div>
         </div>
@@ -25,7 +25,7 @@ export const StickyBottomBar = () => {
           onClick={scrollToSignup}
           className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-2 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-semibold"
         >
-          Join Waitlist
+          Get 1000 Credits
         </Button>
       </div>
     </div>
