@@ -73,21 +73,21 @@ export const WaitlistSection = () => {
   };
 
   return (
-    <section id="signup-section" className="py-20 bg-gradient-to-b from-purple-800/30 to-purple-900/50">
+    <section id="signup-section" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto text-center">
           {/* Early Bird Banner */}
-          <div className="bg-gradient-to-r from-emerald-400 to-green-500 rounded-xl p-4 mb-8 shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div className="bg-accent-gradient rounded-xl p-4 mb-8 shadow-elevated transform hover:scale-105 transition-all duration-300">
             <div className="flex items-center justify-center gap-2">
-              <Gift className="w-6 h-6 text-white" />
-              <span className="text-white font-bold text-lg">🎁 Early Bird Special: Get 1000 FREE Credits!</span>
+              <Gift className="w-6 h-6 text-accent-foreground" />
+              <span className="text-accent-foreground font-bold text-lg">🎁 Early Bird Special: Get 1000 FREE Credits!</span>
             </div>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Join Early Access Waitlist
           </h2>
-          <p className="text-purple-200 text-lg mb-8">
+          <p className="text-muted-foreground text-lg mb-8">
             Be among the first to experience Stylo when we launch in December 2025
           </p>
 
@@ -98,7 +98,7 @@ export const WaitlistSection = () => {
                 placeholder="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-purple-400/30 text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                className="w-full px-4 py-3 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent backdrop-blur-sm"
                 required
               />
               <input
@@ -106,7 +106,7 @@ export const WaitlistSection = () => {
                 placeholder="Country"
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-purple-400/30 text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                className="w-full px-4 py-3 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent backdrop-blur-sm"
                 required
               />
             </div>
@@ -115,13 +115,13 @@ export const WaitlistSection = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg bg-white/10 border border-purple-400/30 text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-lg bg-input border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent backdrop-blur-sm"
               required
             />
             
             {/* Services Interest Section */}
-            <div className="bg-white/10 rounded-lg p-6 mb-6 backdrop-blur-sm border border-purple-400/30">
-              <h3 className="text-white font-semibold text-lg mb-4 text-left">
+            <div className="bg-glass rounded-lg p-6 mb-6 border border-border">
+              <h3 className="text-foreground font-semibold text-lg mb-4 text-left">
                 Which services are you most interested in? (Optional)
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -131,11 +131,11 @@ export const WaitlistSection = () => {
                       id={service}
                       checked={interestedServices.includes(service)}
                       onCheckedChange={() => handleServiceToggle(service)}
-                      className="border-purple-400/50 data-[state=checked]:bg-pink-500 data-[state=checked]:border-pink-500"
+                      className="border-border data-[state=checked]:bg-secondary data-[state=checked]:border-secondary"
                     />
                     <label
                       htmlFor={service}
-                      className="text-purple-200 text-sm cursor-pointer hover:text-white transition-colors"
+                      className="text-muted-foreground text-sm cursor-pointer hover:text-foreground transition-colors"
                     >
                       {service}
                     </label>
@@ -147,7 +147,7 @@ export const WaitlistSection = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-3 px-8 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full bg-cta-gradient hover:scale-105 text-cta-foreground py-3 px-8 rounded-lg font-semibold text-lg shadow-elevated transition-all duration-300"
             >
               {isSubmitting ? "Joining..." : "Get Early Access + 1000 FREE Credits"}
             </Button>
