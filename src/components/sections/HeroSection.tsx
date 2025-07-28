@@ -13,7 +13,7 @@ export const HeroSection = () => {
   const daysUntilLaunch = Math.ceil(timeUntilLaunch / (1000 * 3600 * 24));
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="hero min-h-screen flex items-center justify-center relative overflow-hidden bg-hero-gradient text-white">
       {/* Animated background elements using design system colors */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-secondary to-primary blur-3xl animate-pulse"></div>

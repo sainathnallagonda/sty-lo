@@ -35,7 +35,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-ocean-gradient relative overflow-hidden">
+    <div className="min-h-screen bg-global-gradient relative overflow-hidden">
       {/* Floating background shapes */}
       <div className="floating-shapes">
         <div className="floating-shape w-32 h-32 left-[10%]" style={{ animationDelay: '0s' }}></div>
